@@ -1,9 +1,9 @@
-// JavaScript to handle course CRUD operations
+
 const API_URL = "http://127.0.0.1:5000/courses"; // Update this if the port or URL changes
  
 
-// DOM Elements
-const courseList = document.getElementById("courseList");
+
+const courseList = document.getElementById("courseList");                    // DOM Elements
 const addCourseForm = document.getElementById("addCourseForm");
 const addCourseMessage = document.getElementById("addCourseMessage");
 
@@ -14,8 +14,8 @@ async function fetchCourses() {
     renderCourses(courses);
 }
 
-// Display the list of courses
-function renderCourses(courses) {
+
+function renderCourses(courses) {                                 // Display the list of courses
     courseList.innerHTML = ""; // Clear previous entries
     courses.forEach(course => {
         const courseDiv = document.createElement("div");
@@ -32,8 +32,7 @@ function renderCourses(courses) {
     });
 }
 
-// Add a new course
-addCourseForm.addEventListener("submit", async (event) => {
+addCourseForm.addEventListener("submit", async (event) => {           // Adding a new course
     event.preventDefault();
     const newCourse = {
         title: document.getElementById("courseTitle").value,
@@ -56,16 +55,16 @@ addCourseForm.addEventListener("submit", async (event) => {
     }
 });
 
-// Delete a course by ID
-async function deleteCourse(courseId) {
+
+async function deleteCourse(courseId) {         // Deleteing a course by ID
     await fetch(`${baseURL}/${courseId}`, {
         method: "DELETE"
     });
     fetchCourses(); // Refresh the list
 }
 
-// Edit a course (Prompt-based for simplicity)
-async function editCourse(courseId) {
+ 
+async function editCourse(courseId) {             // Editing a course 
     const newTitle = prompt("Enter new title:");
     const newDescription = prompt("Enter new description:");
     const newDuration = prompt("Enter new duration:");
@@ -86,5 +85,5 @@ async function editCourse(courseId) {
     fetchCourses(); // Refresh the list
 }
 
-// Initial fetch to load courses
+
 fetchCourses();
