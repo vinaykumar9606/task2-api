@@ -1,0 +1,77 @@
+body {
+   font-family: Arial, sans-serif;
+   background: #f0f2f5;
+   margin: 0;
+   padding: 20px;
+}
+
+.container {
+   max-width: 800px;
+   margin: auto;
+   padding: 20px;
+   background: #fff;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+   text-align: center;
+}
+
+form {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   justify-content: center;
+}
+
+form input {
+   padding: 10px;
+   width: 30%;
+}
+
+form button {
+   padding: 10px 20px;
+   background-color: #007bff;
+   border: none;
+   color: white;
+   cursor: pointer;
+   border-radius: 4px;
+}
+
+form button:hover {
+   background-color: #0056b3;
+}
+
+.course {
+   border: 1px solid #ddd;
+   padding: 10px;
+   margin: 10px 0;
+   border-radius: 4px;
+}
+
+.course-title {
+   font-weight: bold;
+}
+
+.course-actions button {
+   padding: 5px 10px;
+   margin-right: 5px;
+   cursor: pointer;
+}
+
+.course-actions .edit {
+   background-color: #28a745;
+   color: white;
+}
+
+.course-actions .delete {
+   background-color: #dc3545;
+   color: white;
+}
+
+.message {
+   text-align: center;
+   margin-top: 10px;
+   color: green;
+}

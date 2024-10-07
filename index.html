@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Course Management System</h1>
+
+        <!-- Add Course Form -->
+        <h2>Add a New Course</h2>
+        <form id="addCourseForm">
+            <input type="text" id="courseTitle" placeholder="Course Title" required>
+            <input type="text" id="courseDescription" placeholder="Course Description" required>
+            <input type="text" id="courseDuration" placeholder="Course Duration (e.g., 4 weeks)" required>
+            <button type="submit">Add Course</button>
+        </form>
+        <div id="addCourseMessage" class="message"></div>
+
+        <!-- Display Courses -->
+        <h2>All Courses</h2>
+        <div id="courseList"></div>
+    </div>
+
+    <!-- Script to manage CRUD operations -->
+    <script src="script.js"></script>
+</body>
+</html>
