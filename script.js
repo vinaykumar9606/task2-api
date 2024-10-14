@@ -15,7 +15,7 @@ async function fetchCourses() {
 }
 
 
-function renderCourses(courses) {                                 // Display the list of courses
+function renderCourses(courses) {                                 // Displaying the list of courses
     courseList.innerHTML = ""; // Clear previous entries
     courses.forEach(course => {
         const courseDiv = document.createElement("div");
@@ -51,7 +51,7 @@ addCourseForm.addEventListener("submit", async (event) => {           // Adding 
     if (response.ok) {
         addCourseMessage.innerText = "Course added successfully!";
         addCourseForm.reset();
-        fetchCourses(); // Refresh the list
+        fetchCourses(); 
     }
 });
 
@@ -60,7 +60,7 @@ async function deleteCourse(courseId) {         // Deleteing a course by ID
     await fetch(`${baseURL}/${courseId}`, {
         method: "DELETE"
     });
-    fetchCourses(); // Refresh the list
+    fetchCourses();
 }
 
  
@@ -82,7 +82,7 @@ async function editCourse(courseId) {             // Editing a course
         },
         body: JSON.stringify(updatedCourse)
     });
-    fetchCourses(); // Refresh the list
+    fetchCourses();
 }
 
 
